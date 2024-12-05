@@ -17,6 +17,7 @@ const Products = ({ data, title }) => {
     }
   };
 
+  
   const handleCart = (prod) => {
     toast.success(" Tovar savatga qo'shildi!", {
       position: "top-center",

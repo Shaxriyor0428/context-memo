@@ -4,12 +4,14 @@ import React, { memo, useEffect, useState } from "react";
 import Products from "../products/Products";
 import axios from "../../api/axios";
 
+
 const Home = () => {
   const [data, setData] = useState(null);
   useEffect(() => {
     axios.get("/products").then((res) => setData(res.data));
   }, []);
   
+
   return (
     <>
       <section
