@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 const NotFoundPage = () => {
+  const navigate = useNavigate();
   return (
     <section className="h-screen w-full flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-purple-600 text-white">
       <div className="text-center">
@@ -11,12 +12,12 @@ const NotFoundPage = () => {
         <p className="text-lg mt-2">
           The page you're looking for doesn't exist or has been moved.
         </p>
-        <a
-          href="/"
+        <button
+          onClick={() => navigate("/")}
           className="mt-6 inline-block bg-white text-blue-600 font-semibold px-6 py-3 rounded-md shadow-md hover:bg-gray-100 transition duration-300"
         >
           Go Back to Home
-        </a>
+        </button>
       </div>
     </section>
   );
